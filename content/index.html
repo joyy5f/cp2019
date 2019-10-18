@@ -118,14 +118,14 @@ init_mathjax();
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>CMSiMDE 網際內容管理系統</h1>
+                <h1>40823124 Webside</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">CMSiMDE 網際內容管理系統</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40823124 Webside</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -150,8 +150,59 @@ init_mathjax();
           
         </header>
     <div id="tipue_search_content"> <a href='40823124.html'>Next</a> >> 40823124<br /><h1>About</h1>
-<p><b><img alt="" height="306" src="./../images/EUt8sox.gif" width="500"/></b></p>
-<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=d90e4f9a4a33e3b6fd66d78174b8b0a5" width="500"></iframe></p><br /> <a href='40823124.html'>Next</a> >> 40823124</div>
+<p><b>Webside</b></p>
+<p><img alt="" height="306" src="./../images/EUt8sox.gif" width="500"/></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">import 'dart:html';
+
+void main() {
+  // 每一組 10 人
+  int num = 10;
+  // 組序由 1 開始
+  int gth = 1;
+  // 迴圈序號變數
+  int i;
+  // 每組學員暫存數列
+  var gp_list = [];
+  // 全班分組數列
+  var cp2019 = [];
+
+  HttpRequest.getString(
+          'https://mde.tw/cp2019/downloads/2019fall_cp_1a_list.txt')
+      .then((String resp) {
+    // 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列
+    var stud_list = resp.trim().split("\n");
+    // 數列利用 shuffle() 方法以隨機方法弄亂順序
+    stud_list.shuffle();
+    // 逐一讀取已經弄亂的學生學號數列, 利用模數運算每幾人分成一組
+    for (i = 0; i &lt; stud_list.length; i++) {
+      // 0, 1~(num-1), num
+      if (i % num == 0) {
+        gp_list = [];
+        // 列印區隔符號
+        print('=' * 20);
+        print("group $gth :");
+        print(stud_list[i]);
+        // 在各分組數列中加入將對應的學員學號
+        gp_list.add(stud_list[i]);
+        gth = gth + 1;
+      } else {
+        print(stud_list[i]);
+        // 在各分組數列中加入將對應的學員學號
+        gp_list.add(stud_list[i]);
+      }
+      if (i % num == 0) {
+        // 逐步將各組暫存的分組數列加入全班分組數列中
+        cp2019.add(gp_list);
+      }
+    }
+    // 列出全班分組數列
+    print(cp2019);
+  });
+}
+</pre>
+<p><a href="https://mde.tw/dartpad/?id=d90e4f9a4a33e3b6fd66d78174b8b0a5" target="blank"><b>Dartpad</b></a> </p>
+<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=d90e4f9a4a33e3b6fd66d78174b8b0a5" width="500"></iframe></p>
+<br /> <a href='40823124.html'>Next</a> >> 40823124</div>
         
     <!-- footer -->
       <div class="container">
