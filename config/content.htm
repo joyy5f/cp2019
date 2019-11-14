@@ -76,4 +76,25 @@ void main() {
 <p>阻尼係數為2</p>
 <p><img alt="" height="285" src="/images/f(x)2.png" width="474"/></p>
 <h2>temperature</h2>
-<p><iframe height="600" src="https://mde.tw/dartpad/?id=afba3622ec7e7eb919023bcbc7735e35" width="800"></iframe></p>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<!-- 取 Dart 程式的按鈕 -->
+<h4>純 Dart 程式</h4>
+<p><button onclick="getDart('hello')">Hello</button></p>
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><iframe height="600" src="https://dartpad.dartlang.org/afba3622ec7e7eb919023bcbc7735e35" width="800"></iframe></p>
