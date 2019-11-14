@@ -152,10 +152,9 @@ init_mathjax();
     <div id="tipue_search_content">常微分曲線圖 << <a href='常微分曲線圖.html'>Previous</a> <br /><h1>temperature</h1>
 <script>
 function getDart(dirname){
-    source = "https://dartpad.github.io/embed-dart.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823124&gh_repo=cp2019&gh_path=temperature" + dirname + "&theme=dark";
     document.getElementById("iframe").src = source ;
 }
-
 
 function largest(){
 document.getElementById("iframe").width = document.body.clientWidth ;
@@ -167,9 +166,7 @@ document.getElementById("iframe").width = 800 ;
 document.getElementById("iframe").height = 600 ;
 }
 </script>
-<!-- 取 Dart 程式的按鈕 -->
-<h4>純 Dart 程式</h4>
-<p><button onclick="getDart('hello')">Hello</button></p>
+<p><button onclick="getDart('temperature')">temperature</button></p>
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
 <p><iframe height="600" src="https://dartpad.dartlang.org/afba3622ec7e7eb919023bcbc7735e35" width="800"></iframe></p><br />常微分曲線圖 << <a href='常微分曲線圖.html'>Previous</a> </div>
         

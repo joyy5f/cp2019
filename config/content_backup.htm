@@ -1,8 +1,8 @@
-<h1><b><i>About</i></b></h1>
+<h1>About</h1>
 <p><a href="https://forms.gle/hztfjHLkrAaLyntv6" target="blank"><marquee behavior="alternate" scrollamount="10"><b>自 我  評  分 </b></marquee></a></p>
 <p>This is 40823124's Webside</p>
 <p><img alt="" height="465" src="/images/黑貓.jpg" width="394"/></p>
-<h2><b>Webside</b></h2>
+<h2>Webside</h2>
 <p><a href="https://40823124.github.io/cp2019/content/index.html" target="blank"><b>MY  Webside</b></a></p>
 <p><img alt="" height="306" src="/images/EUt8sox.gif" width="500"/></p>
 <h1>Code</h1>
@@ -78,10 +78,20 @@ void main() {
 <h2>temperature</h2>
 <script>
 function getDart(dirname){
-    source = "https://dartpad.github.io/embed-dart.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823124&gh_repo=cp2019&gh_path=temperature" + dirname + "&theme=dark";
     document.getElementById("iframe").src = source ;
 }
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
 </script>
-<p><button onclick="getDart('hello')">Hello</button></p>
+<p><button onclick="getDart('temperature')">temperature</button></p>
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
 <p><iframe height="600" src="https://dartpad.dartlang.org/afba3622ec7e7eb919023bcbc7735e35" width="800"></iframe></p>
