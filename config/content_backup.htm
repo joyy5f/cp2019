@@ -87,7 +87,7 @@ document.getElementById("iframe").src = source ;
 }
 
 function getFlutter(dirname){
-    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/temperature/" + dirname + "&theme=dark";
 document.getElementById("iframe").src = source ;
 }
 
@@ -103,4 +103,23 @@ document.getElementById("iframe").height = 600 ;
 </script>
 <p><button onclick="getDart('temperature')">temperature</button></p>
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
-<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823124&amp;gh_repo=cp2019&amp;gh_path=dart_ex/temperature/&amp;theme=dark" width="800"></iframe></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823124&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/temperature/&amp;theme=dark" width="800"></iframe></p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">int x = 0;
+num F = 86;
+num C = 30;
+
+void main(){
+  if (x == 0) {
+  num F2 = C*9/5+32;
+			print('F=$F2');
+  }
+  else{
+    if (x==1){
+    num C2 = (F-32)*5/9;
+			print('C=$C2');
+  }
+
+  }
+    print('x=0,1切換(華氏、攝氏)');
+}</pre>
+<p><br/><br/></p>
