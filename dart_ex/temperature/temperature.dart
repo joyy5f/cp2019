@@ -8,10 +8,11 @@ void main(){
 			print('F=$F2');
   }
   else{
-    
+    if (x==1){
     num C2 = (F-32)*5/9;
 			print('C=$C2');
   }
-  print('x=0,1切換(華氏、攝氏)');
-  
+
+  }
+    print('x=0,1切換(華氏、攝氏)');
 }
