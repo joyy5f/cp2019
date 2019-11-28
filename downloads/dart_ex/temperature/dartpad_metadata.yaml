@@ -2,6 +2,6 @@
 name: Dart HTML test with just main
 mode: dart
 files:
-  - name: main.dart
+  - name: temaerature.dart
   - name: index.html
   - name: style.css
