@@ -134,8 +134,40 @@ void main(){
 <h2>For迴圈</h2>
 <p><iframe height="600" src="https://mde.tw/dartpad/?id=d90e4f9a4a33e3b6fd66d78174b8b0a5" width="800"></iframe></p>
 <h2>rangekutta</h2>
-<p><iframe height="600" src="https://mde.tw/dartpad/?id=74a4b9478873bbb3036c9c15a59945a3" width="800"></iframe></p>
+<p><iframe height="600" src="https://mde.tw/dartpad/?id=eb2d378e3e15af0abc62b262085f34ff" width="800"></iframe></p>
 <h2>溫度轉換</h2>
+<p>溫度轉換1</p>
+<p><iframe height="600" src="https://mde.tw/dartpad/?id=afba3622ec7e7eb919023bcbc7735e35" width="800"></iframe></p>
+<p>溫度轉換2</p>
 <p><iframe height="600" src="https://mde.tw/dartpad/?id=c0fc7ae66a69530fbf046f43e1b56aa3" width="800"></iframe></p>
 <h2>國旗</h2>
-<p><iframe height="600" src="https://mde.tw/dartpad/?id=74a4b9478873bbb3036c9c15a59945a3" width="800"></iframe></p>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 600 ;
+document.getElementById("iframe").height = 400 ;
+}
+</script>
+<p><button onclick="getHtmlDart('usaflag')">USAflag</button></p>
+<p><button onclick="largest()">放大</button></p>
+<p><button onclick="original()">回復</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823124&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/usaflag&amp;theme=dark" width="800"></iframe></p>

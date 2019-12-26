@@ -118,14 +118,14 @@ init_mathjax();
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>40823124 Webside</h1>
+                <h1>40823124 Website</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40823124 Webside</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40823124 Website</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -150,7 +150,36 @@ init_mathjax();
           
         </header>
     <div id="tipue_search_content">溫度轉換 << <a href='溫度轉換.html'>Previous</a> <br /><h1>國旗</h1>
-<p><iframe height="600" src="https://mde.tw/dartpad/?id=74a4b9478873bbb3036c9c15a59945a3" width="800"></iframe></p><br />溫度轉換 << <a href='溫度轉換.html'>Previous</a> </div>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 600 ;
+document.getElementById("iframe").height = 400 ;
+}
+</script>
+<p><button onclick="getHtmlDart('usaflag')">USAflag</button></p>
+<p><button onclick="largest()">放大</button></p>
+<p><button onclick="original()">回復</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823124&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/usaflag&amp;theme=dark" width="800"></iframe></p><br />溫度轉換 << <a href='溫度轉換.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
