@@ -151,20 +151,39 @@ make.start()
 <section>
 <h3>For迴圈</h3>
 </section>
-<section>
+<section data-markdown>
+    <script type="text/template">
 <h5>重複執行{}內的程式直至達到定值</h5>
-<iframe width="1000" height="700" src="https://dartpad.github.io/embed-html.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/for&theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<iframe width="800" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/for&theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 </section>
 </section>
 
 <section>
 <section>
-<h3>在網頁中插入dartpad</h3>
+<h3>溫度轉換與按鈕</h3>
 </section>
-<section>
+<section data-markdown>
+    <script type="text/template">
 <h5>撰寫完成的dart的id貼到dartpad後的id上可做更改</h5>
-<p><img src="https://github.com/40823124/cp2019/blob/master/images/%E5%B5%8C%E5%85%A5DARTPAD.png?raw=true" alt="" width="500" height="400"></p>
-</section>
+<script>// <![CDATA[
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+// ]]></script>
+<p><button onclick="getDart('temperature')">temperature</button></p>
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><iframe width="800" height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823124&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/temperature&amp;theme=dark"></iframe></p>
 </section>
 
 
