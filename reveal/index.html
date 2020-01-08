@@ -164,26 +164,13 @@ make.start()
 </section>
 <section data-markdown>
     <script type="text/template">
-<h5>撰寫完成的dart的id貼到dartpad後的id上可做更改</h5>
-<script>// <![CDATA[
-function getDart(dirname){
-    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
-    document.getElementById("iframe").src = source ;
-}
-
-function largest(){
-document.getElementById("iframe").width = document.body.clientWidth ;
-document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
-}
-
-function original(){
-document.getElementById("iframe").width = 800 ;
-document.getElementById("iframe").height = 600 ;
-}
-// ]]></script>
-<p><button onclick="getDart('temperature')">temperature</button></p>
-<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<h5>溫度轉換</h5>
 <p><iframe width="800" height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823124&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/temperature&amp;theme=dark"></iframe></p>
+</section>
+<section>
+<h3>按鈕</h3>
+</section>
+<p><img src="https://github.com/40823124/cp2019/blob/master/images/%E6%8C%89%E9%88%95.png?raw=true" alt="" width="500" height="400"></p>
 </section>
 
 
