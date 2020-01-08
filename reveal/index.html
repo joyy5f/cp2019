@@ -40,6 +40,7 @@
 <section data-markdown>
     <script type="text/template">
 <h2>計算機程式期末簡報</h2>
+
   <h3>四設計一甲40823124廖璟程<h3>
 
 <small>
@@ -70,61 +71,9 @@
 
 
 						
-<section>
-<section data-markdown>
-    <script type="text/template">
-<!-- 請注意, @others 不可以內縮 -->
-# Github使用
-
-
-    </script>
-</section>
-
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-<!-- 請注意, @others 不可以內縮 -->
-## 利用 Markdown 寫投影片
-以下利用 Markdown 格式展示 Python 程式碼:
-```
-# use threading and subprocess to threading the make process
-import os
-import subprocess
-import threading
-
-def domake():
-    
-    path = "../exposed/api/exposed"
-    ubuntu = "../Ubuntu"
-    
-    # create obj path
-    
-    if not os.path.exists(path+"/../obj"):
-        os.makedirs(path+"/../obj")
-    
-    subprocess.call(["make", "clean"], cwd=path)
-    subprocess.call("make", cwd=path)
-    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
-    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
-    
-make = threading.Thread(target=domake)
-make.start()
-```
-    </script>
-</section>
-					
-</section>
 
 <section>
-<section>
-<h3>寫出第一個dart，跟世界說聲哈囉吧!</h3>
-</section>
-<section>
-<h3>首次接觸Dart寫出所有程式的入門"Hello World"</h3>
-<iframe width="800" height="600" src="https://mde.tw/dartpad/?id=215ba63265350c02dfbd586dfd30b8c3"></iframe>
-</section>
+<h3>Github使用</h3>
 </section>
 
 <section>
@@ -136,6 +85,7 @@ make.start()
 <p><img src="https://github.com/40823124/cp2019/blob/master/images/%E7%B6%B2%E7%AB%99.png?raw=true" alt="" width="1000" height="600"></p>
 </section>
 </section>
+
 
 <section>
 <section>
@@ -149,17 +99,24 @@ make.start()
 
 <section>
 <section>
+<h3>寫出第一個dart，跟世界說聲哈囉吧!</h3>
+</section>
+<section>
+<h3>寫出所有程式的入門"Hello World"</h3>
+<iframe width="800" height="400" src="https://mde.tw/dartpad/?id=215ba63265350c02dfbd586dfd30b8c3"></iframe>
+</section>
+</section>
+
+<section>
+<section>
 <h3>For迴圈</h3>
 </section>
 <section data-markdown>
     <script type="text/template">
 <h5>重複執行{}內的程式直至達到定值</h5>
-<iframe width="800" height="500" src="https://dartpad.github.io/embed-html.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/for&theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<iframe width="800" height="400" src="https://dartpad.github.io/embed-html.html?gh_owner=40823124&gh_repo=cp2019&gh_path=downloads/dart_ex/for&theme=dark" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+</script>
 </section>
-</section>
-
-<section>
-<h3>溫度轉換與按鈕</h3>
 </section>
 
 <section>
@@ -169,16 +126,14 @@ make.start()
 <section data-markdown>
     <script type="text/template">
 <h5>溫度轉換</h5>
-<p><iframe width="800" height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823124&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/temperature&amp;theme=dark"></iframe></p>
+<p><iframe width="800" height="400" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=40823124&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/temperature&amp;theme=dark"></iframe></p>
 </section>
+</script>
 <section>
 <h3>按鈕</h3>
 <p><img src="https://github.com/40823124/cp2019/blob/master/images/%E6%8C%89%E9%88%95.png?raw=true" alt="" width="500" height="400"></p>
 </section>
 </section>
-
-
-
 
 </div>
 
@@ -194,7 +149,7 @@ make.start()
             history: true,
             center: true,
 
-            transition: 'fade', // none/fade/slide/convex/concave/zoom
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
 
             // More info https://github.com/hakimel/reveal.js#dependencies
             dependencies: [
@@ -209,5 +164,6 @@ make.start()
         });
 </script>
 </body>
+
 </html>
 
